@@ -14,7 +14,7 @@ const path = require("path");
 dotenv.config();
 
 mongoose.connect(
-  "mongodb+srv://admin:mohit1211@cluster0.qfy2y.mongodb.net/social-media?retryWrites=true&w=majority",
+  process.env.MONGO_URL,
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => {
     console.log("Connected to MongoDB");
